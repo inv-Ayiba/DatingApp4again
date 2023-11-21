@@ -19,6 +19,7 @@ namespace API.Controllers
         public AccountController(DataContext context, ITokenService tokenService)
         {
             _context = context;
+            _tokenService = tokenService; //not sure he wroteit this way
         }
         [HttpPost("register")]
         // public async Task<ActionResult<AppUser>> Register(RegisterDto registerDto)
