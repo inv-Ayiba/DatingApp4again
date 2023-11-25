@@ -10,11 +10,11 @@ import { User } from '../_models/user';
 })
 export class NavComponent implements OnInit{
   model: any = {};
-  currentUser$: Observable<User | null> = of(null);
-  constructor(private accountService: AccountService){}
+  // currentUser$: Observable<User | null> = of(null);
+  constructor(public accountService: AccountService){}
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.currentUser$ ;
+    // this.currentUser$ = this.accountService.currentUser$ ;
   }
 
   // getCurrentUser(){
@@ -28,7 +28,7 @@ export class NavComponent implements OnInit{
     this.accountService.login(this.model).subscribe({
       next: response => {
         console.log(response);
-        this.loggedIn= true;
+        // this.loggedIn= true;
       },
       error: error => console.log("error oh",error)
     })
@@ -36,7 +36,7 @@ export class NavComponent implements OnInit{
 
   logout(){
     this.accountService.logout();
-    this.loggedIn = false;
+    // this.loggedIn = false;
   }
 
 }
