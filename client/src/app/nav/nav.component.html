@@ -106,7 +106,7 @@
           <a class="dropdown-item" (click)="logout()">Logout</a>
         </div>
       </div>
-        <form *ngIf="!(accountService.currentUser$ | async)" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
+         <form *ngIf="!(accountService.currentUser$ | async)" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
           <input
           name="username"
           [(ngModel)]="model.username"
