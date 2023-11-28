@@ -83,20 +83,20 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">The-App</a>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">The-App</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="accountService.currentUser$ | async">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">pouch</a>
+            <a class="nav-link active" aria-current="page" routerLink="/members" routerLinkActive="active">pouch</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Linky Dinky</a>
+            <a class="nav-link" routerLink="/linky" routerLinkActive="active">Linky Dinky</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Messages</a>
+            <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
           </li>
         </ul>
         <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
